@@ -106,11 +106,14 @@ public class TicketMachine
      */
     public int emptyMachine()
     {
-        int amountToRefund = balance;
-        int totalMoney = total + balance;
-        total = 0;
-        balance = 0;
-        return totalMoney;
+        if (balance > 0){
+            int totalMoney = total + balance;
+            total = 0;
+            return totalMoney;
+        }
+        else{
+            return -1;
+        }
     }
 }
 
