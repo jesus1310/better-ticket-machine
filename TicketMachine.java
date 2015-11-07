@@ -107,7 +107,7 @@ public class TicketMachine
     public int emptyMachine()
     {
         if (balance == 0){
-            int totalMoney = total+balance;
+            int totalMoney = total;
             total = 0;
             return totalMoney;
         }
